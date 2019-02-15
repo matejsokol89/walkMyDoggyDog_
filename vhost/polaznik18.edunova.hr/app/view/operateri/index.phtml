@@ -1,0 +1,15 @@
+<div class="grid-x">
+    <?php foreach($operateri as $operater): ?>
+    <div class="cell large-3">
+        <div class="success callout operateri">
+            <h1><?php echo $operater->ime?>
+    <br />
+    <?php echo $operater->prezime?>
+    </h1>
+    <?php echo $operater->email?>
+
+    </div>
+    </div>
+
+    <?php endforeach; ?>
+</div>

@@ -1,0 +1,17 @@
+<form class="log-in-form" method="post" 
+action="<?php echo App::config("url") ?>admin/login">
+
+  <label>Email
+    <input type="email" name="email" placeholder="tjakopec@gmail.com"
+    value="<?php echo Request::post("email") ?>">
+  </label>
+  <label>Password
+    <input type="password" name="password" placeholder="t">
+  </label>
+ 
+  <p><input type="submit" class="button expanded" value="Log in" /></p>
+
+</form>
+<?php echo $poruka ?>
+
+
