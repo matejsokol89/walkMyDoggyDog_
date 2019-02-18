@@ -3,42 +3,42 @@
 class Osoba
 {
 
-//    public static function read()
-//    {
-//        $db = Db::getInstance();
-//        $izraz = $db->prepare("
-//
-//                    select
-//                    a.sifra,
-//                    a.ime,
-//                    a.prezime,
-//                    a.email,
-//                    a.adresa,
-//                    a.mobitel,
-//                    a.slika,
-//                    count(b.sifra) as ukupno from
-//                    osoba a left join o_p b on a.sifra=b.osoba
-//                    group by
-//                    a.sifra,
-//                    a.ime,
-//                    a.prezime,
-//                    a.email,
-//                    a.adresa,
-//                    a.mobitel,
-//                    a.slika
-//                    order by a.naziv
-//
-//        ");
-//        $izraz->execute();
-//        return $izraz->fetchAll();
-//    }
+   public static function read()
+   {
+       $db = Db::getInstance();
+       $izraz = $db->prepare("
 
-    public static function read(){
-        $db = Db::getInstance();
-        $izraz = $db->prepare("select sifra,ime,prezime,email,adresa,mobitel,slika from osoba");
-        $izraz->execute();
-        return $izraz->fetchAll();
-    }
+                   select
+                   a.sifra,
+                   a.ime,
+                   a.prezime,
+                   a.email,
+                   a.adresa,
+                   a.mobitel,
+                   a.slika,
+                   count(b.osoba) as ukupno from
+                   osoba a left join o_p b on a.sifra=b.osoba
+                   group by
+                   a.sifra,
+                   a.ime,
+                   a.prezime,
+                   a.email,
+                   a.adresa,
+                   a.mobitel,
+                   a.slika
+                   order by a.ime
+
+       ");
+       $izraz->execute();
+       return $izraz->fetchAll();
+   }
+
+    // public static function read(){
+    //     $db = Db::getInstance();
+    //     $izraz = $db->prepare("select sifra,ime,prezime,email,adresa,mobitel,slika from osoba");
+    //     $izraz->execute();
+    //     return $izraz->fetchAll();
+    // }
 
 
     public static function find($id)

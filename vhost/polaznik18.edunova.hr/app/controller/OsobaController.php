@@ -101,15 +101,15 @@ class OsobaController
     function prepareedit($id)
     {
         $view = new View();
-        $smjer = Osoba::find($id);
-        $_POST["ime"]=$smjer->ime;
-        $_POST["prezime"]=$smjer->prezime;
-        $_POST["email"]=$smjer->email;
-        $_POST["adresa"]=$smjer->adresa;
+        $osoba = Osoba::find($id);
+        $_POST["ime"]=$osoba->ime;
+        $_POST["prezime"]=$osoba->prezime;
+        $_POST["email"]=$osoba->email;
+        $_POST["adresa"]=$osoba->adresa;
 //        $_POST["verificiran"]=$smjer->verificiran ? "on" : "";
-        $_POST["mobitel"]=$smjer->mobitel;
-        $_POST["slika"]=$smjer->slika;
-        $_POST["sifra"]=$smjer->sifra;
+        $_POST["mobitel"]=$osoba->mobitel;
+        $_POST["slika"]=$osoba->slika;
+        $_POST["sifra"]=$osoba->sifra;
 
         $view->render(
             'osoba/edit',

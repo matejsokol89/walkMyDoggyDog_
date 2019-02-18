@@ -1,27 +1,24 @@
-<label>Naziv
-    <input type="text" name="naziv" 
-    value="<?php echo Request::post("naziv") ?>" />
+<label>Ime
+    <input type="text" name="ime" 
+    value="<?php echo Request::post("ime") ?>" />
   </label>
 
-  <label>Trajanje
-    <input type="number" name="trajanje"
-    value="<?php echo Request::post("trajanje") ?>" />
+  <label>Prezime
+    <input type="text" name="prezime"
+    value="<?php echo Request::post("prezime") ?>" />
   </label>
 
-  <label>Cijena
-    <input type="number" step="0.01" name="cijena"
-    value="<?php echo Request::post("cijena") ?>" />
+  <label>Email
+    <input type="text" name="email"
+    value="<?php echo Request::post("email") ?>" />
   </label>
 
-  <label>Upisnina
-    <input type="number" step="0.01" name="upisnina"
-    value="<?php echo Request::post("upisnina") ?>" />
+  <label>Adresa
+    <input type="text" name="adresa"
+    value="<?php echo Request::post("adresa") ?>" />
   </label>
 
-  <label>Verificiran
-    <input type="checkbox" name="verificiran" 
-    <?php if(Request::post("verificiran")==="on"){
-        echo "checked";
-    } ?>
-     />
+  <label>Mobitel
+    <input type="number" name="mobitel"
+    value="<?php echo Request::post("mobitel") ?>" />
   </label>

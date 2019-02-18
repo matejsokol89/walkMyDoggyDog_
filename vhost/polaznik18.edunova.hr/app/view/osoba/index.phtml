@@ -14,27 +14,27 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach($smjerovi as $smjer): ?>
+        <?php foreach($osoba as $osoba): ?>
         <tr>
-            <td><?php echo $smjer->ime ?></td>
-            <td><?php echo $smjer->prezime ?></td>
-            <td><?php echo $smjer->email ?></td>
-            <td><?php echo $smjer->adresa ?></td>
-            <td><?php echo $smjer->mobitel ?></td>
-            <td><?php echo $smjer->slika ?></td>
+            <td><?php echo $osoba->ime ?></td>
+            <td><?php echo $osoba->prezime ?></td>
+            <td><?php echo $osoba->email ?></td>
+            <td><?php echo $osoba->adresa ?></td>
+            <td><?php echo $osoba->mobitel ?></td>
+            <td><?php echo $osoba->slika ?></td>
 <!--            <td>-->
 <!--            -->
 <!--            <i class="fa--><?php //echo $smjer->verificiran ? "s" : "r" ?><!-- fa-check-square"></i>-->
 <!--            -->
 <!--            </td>-->
             <td> 
-                <a href="<?php echo App::config("url") ?>osoba/prepareedit/<?php echo $smjer->sifra ?>">
-                    <i class="fas fa-edit fa-2x"></i>
+                <a href="<?php echo App::config("url") ?>osoba/prepareedit/<?php echo $osoba->sifra ?>">
+                    <i style ="color:green;" class="fas fa-edit fa-2x"></i>
                 </a>
 
-                <?php if($smjer->ukupno==0): ?>
+                <?php if($osoba->ukupno==0): ?>
                     <a style="color: red;"
-                     href="<?php echo App::config("url") ?>osoba/delete/<?php echo $smjer->sifra ?>">
+                     href="<?php echo App::config("url") ?>osoba/delete/<?php echo $osoba->sifra ?>">
                         <i class="fas fa-trash fa-2x"></i>
                     </a>
                 <?php endif; ?>

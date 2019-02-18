@@ -1,6 +1,7 @@
 
-*{
+.content1{
     font-family: 'Roboto', sans-serif;
+    color:steelblue; 
 }
 
 
@@ -10,7 +11,7 @@
 }
 
 .fa-edit{
-     color: green;
+     color: white;
  }
 
 .naslov h1 {
@@ -31,13 +32,14 @@ body{
     /* background: url(https://wallpapercave.com/wp/uBmyGsS.jpg);
     background-size: cover;
     background-position:25% -35%; */
-    color: white;
+    
 
 }
 
 h1{
     font-weight: 700;
     font-size: 5em;
+    color:white;
 }
 
 #DoggyImg {
@@ -58,6 +60,7 @@ h1{
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
+    color: white;
 }
 
 
@@ -75,4 +78,9 @@ hr {
     border-top:1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 
+}
+
+
+.rezultat {
+    color: black;
 }
