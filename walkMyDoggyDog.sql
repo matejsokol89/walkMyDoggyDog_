@@ -43,6 +43,36 @@ aktivan boolean not null,
 pas int not null
 );
 
+create table operater(
+	sifra int not null primary key auto_increment,
+	ime varchar(50) not null,
+	prezime varchar(50) not null,
+	email varchar(100) not null,
+	lozinka char(60) not null
+);
+
+insert into operater (ime,prezime,email,lozinka) values
+(
+	'Matej',
+	'Sokol',
+	'sokolvm@gmail.com',
+	'$2y$10$0oeK5JKlHslw1ksWLcimZOV2ggnEh5vltZq3ckemw4eIH79GYpTwi'
+
+);
+
+insert into osoba (ime,prezime,email,adresa,mobitel,slika) values
+(
+	'Matej',
+	'Sokol',
+	'sokolvm@gmail.com',
+	'Crkvena 61',
+	0977137631,
+	'slika'
+
+);
+
+
+
 alter table vlasnik add foreign key (osoba) references osoba(sifra);
 alter table iznajmljivac add foreign key (osoba) references osoba(sifra);
 alter table pas add foreign key (vlasnik) references vlasnik(sifra);
