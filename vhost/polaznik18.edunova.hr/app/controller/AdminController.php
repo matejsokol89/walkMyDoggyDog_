@@ -29,7 +29,7 @@ class AdminController
 
                 Session::getInstance()->login($user);
 
-                $view->render('index',["poruka"=>"Usmješno prijavljen"]);
+                $view->render('index',["poruka"=>"Uspješno prijavljen"]);
             }else{
                 $view->render('prijava',["poruka"=>"Kombinacija email i lozinka ne odgovara"]);
             }

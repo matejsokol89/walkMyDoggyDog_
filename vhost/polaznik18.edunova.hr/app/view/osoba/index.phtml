@@ -1,0 +1,46 @@
+<a href="<?php echo App::config("url") ?>osoba/prepareadd" class="success button expanded">
+    Dodaj novu osobu
+</a>
+<table>
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Adresa</th>
+            <th>Mobitel</th>
+            <th>slika</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($smjerovi as $smjer): ?>
+        <tr>
+            <td><?php echo $smjer->ime ?></td>
+            <td><?php echo $smjer->prezime ?></td>
+            <td><?php echo $smjer->email ?></td>
+            <td><?php echo $smjer->adresa ?></td>
+            <td><?php echo $smjer->mobitel ?></td>
+            <td><?php echo $smjer->slika ?></td>
+<!--            <td>-->
+<!--            -->
+<!--            <i class="fa--><?php //echo $smjer->verificiran ? "s" : "r" ?><!-- fa-check-square"></i>-->
+<!--            -->
+<!--            </td>-->
+            <td> 
+                <a href="<?php echo App::config("url") ?>osoba/prepareedit/<?php echo $smjer->sifra ?>">
+                    <i class="fas fa-edit fa-2x"></i>
+                </a>
+
+                <?php if($smjer->ukupno==0): ?>
+                    <a style="color: red;"
+                     href="<?php echo App::config("url") ?>osoba/delete/<?php echo $smjer->sifra ?>">
+                        <i class="fas fa-trash fa-2x"></i>
+                    </a>
+                <?php endif; ?>
+            
+             </td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

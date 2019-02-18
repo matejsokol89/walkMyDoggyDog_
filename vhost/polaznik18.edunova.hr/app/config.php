@@ -3,10 +3,10 @@
 return [
     "url"=>"http://polaznik18.edunova.hr/",
     "dev"=>true,
-    "nazivApp" => "Edunova APP",
+    "nazivApp" => "Walk My Doggy Dog",
     "db"=> [
         "host"=>"localhost",
-        "name"=>"edunovapp18",
+        "name"=>"walkMyDoggyDog",
         "user"=>"edunova",
         "password"=>"edunova"
     ]

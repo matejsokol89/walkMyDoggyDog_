@@ -9,37 +9,30 @@
     <div class="grid-container">
 
     <div class="grid-x">
-        <div class="large-1 medium-1 columns hide-for-small-only">
-        <img style="padding: 10px;" src="<?php echo App::config("url") ?>public/img/Edunova.svg" alt="Logo">
-        </div>
+
         <div id="content" class="large-11 medium-11 small-12 columns">
             <h1 style="width: 100%; text-align: center; padding-top:15px;"><?php echo App::config("nazivApp") ?></h1>
         </div>
     </div>
        
-        <div class="content">
-            <h3 style="text-align: center;">If you are bored and don't know where to go<br> come here and Walk My Doggy Dog!</h3>
+        <div class="content1">
+            <h3 style="text-align: center; font-size: 1.5rem">If you are bored and don't know where to go<br> come here and Walk My Doggy Dog!</h3>
             <hr>
-
-            <div class="center-button" style="text-align:center;padding-top: 10px;>
-               <a class="button large" href="#"><i class="fa fa-paw fa-fw"></i> Get Started</a>
-            </div>
-
-<!--            <button class="btn btn-default btn-lg"><i class="fa fa-paw fa-fw"></i> Get Started</button>-->
             <div>
                 <br>
-            <img id="DoggyImg" style="" src="<?php echo App::config("url") ?>public/img/walkingdog.svg" alt="Image" width="640" height="427" />
+            <img id="DoggyImg" style="" src="<?php echo App::config("url") ?>public/img/walking-dogs-clipart-7.png" alt="Image" width="640" height="427" />
 
         </div>
+            <div class="" style="min-height: 400px;">
+                <?php echo $content ?>
+
+            </div>
 
 
         <div class="">
-           &copy; Edunova <?php echo date("Y") ?>
+           &copy; Matej Sokol <?php echo date("Y") ?>
         </div>
-
-
-
-
+        </div>
     </div>
     <script src="<?php echo App::config("url") ?>public/js/vendor/jquery.js"></script>
     <script src="<?php echo App::config("url") ?>public/js/vendor/what-input.js"></script>
