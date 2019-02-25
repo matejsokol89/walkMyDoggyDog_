@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6d42a37-04b5-44d1-8f6a-d6958b5cc5e5" name="Default Changelist" comment="" />
+    <list default="true" id="e6d42a37-04b5-44d1-8f6a-d6958b5cc5e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PasController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Pas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/edit.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/index.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/kontrole.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/new.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/edit.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/edit.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/new.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/new.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/polaznik18.edunova.hr/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walkMyDoggyDog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../walkMyDoggyDog.sql" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,88 +44,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/prijava.phtml">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Pas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="49" />
+            <state relative-caret-position="204">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/AdminController.php">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/View.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+            <state relative-caret-position="408">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/App.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Operater.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="10" />
+            <state>
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="463">
+              <caret line="35" column="68" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/edit.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="187">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PasController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/kontrole.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/new.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>osoba</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -129,12 +161,18 @@
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/smjerovi/index.phtml" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/prijava.phtml" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml" />
-        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/edit.phtml" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/new.phtml" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php" />
         <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/edit.phtml" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/new.phtml" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/index.phtml" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/kontrole.phtml" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Pas.php" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PasController.php" />
+        <option value="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml" />
       </list>
     </option>
   </component>
@@ -152,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,7 +235,7 @@
               <item name="polaznik18.edunova.hr" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="operateri" type="462c0819:PsiDirectoryNode" />
+              <item name="osoba" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vhost" type="b2602c69:ProjectViewProjectNode" />
@@ -206,12 +243,13 @@
               <item name="polaznik18.edunova.hr" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="osoba" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,15 +258,15 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\vhost\polaznik18.edunova.hr\public\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\walkMyDoggyDogApp\vhost\polaznik18.edunova.hr\app\view\pas" />
       <recent name="G:\walkMyDoggyDogApp\vhost\polaznik18.edunova.hr\public\img" />
       <recent name="C:\vhost\polaznik18.edunova.hr\public\img" />
       <recent name="C:\vhost\polaznik18.edunova.hr" />
       <recent name="C:\vhost\polaznik18.edunova.hr\public\css" />
-      <recent name="C:\vhost\polaznik18.edunova.hr\app\view\smjerovi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\vhost\polaznik18.edunova.hr\public\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -259,6 +297,8 @@
       <workItem from="1550330153341" duration="587000" />
       <workItem from="1550330982177" duration="2377000" />
       <workItem from="1550499000979" duration="4105000" />
+      <workItem from="1551112558411" duration="2902000" />
+      <workItem from="1551115757645" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="ne radi mi veza s bazom odnosno ne ocitava osobu">
       <created>1550502877941</created>
@@ -271,17 +311,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21193000" />
+    <option name="totallyTimeSpent" value="28098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1881663" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12153518" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="2" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -344,24 +384,43 @@
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml">
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OperaterController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/operateri/index.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/kontakt.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/onama.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/prijava.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        <state relative-caret-position="85">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OperaterController.php">
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Operater.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Request.php">
@@ -369,19 +428,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="103">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/View.php">
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="272">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/operateri/index.phtml">
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Smjer.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/SmjerController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/edit.phtml">
@@ -398,6 +491,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Pas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -405,78 +519,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/kontakt.phtml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/kontrole.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/new.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state>
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/onama.phtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/prijava.phtml">
+    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Operater.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="463">
+          <caret line="35" column="68" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="68" />
         </state>
       </provider>
     </entry>
