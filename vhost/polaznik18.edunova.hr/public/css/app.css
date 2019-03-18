@@ -22,7 +22,15 @@
     text-align: center;
     margin-right: 15px;
 }
-
+.callout{
+    background-color: rgba(0,0,0,0.0);
+    border: rgba(0,0,0,0.0);
+}
+#callout1{
+    width: auto;
+    margin-right: 100px;
+    margin-left: 100px;
+}
 
 body{
     background-color: #ffffff;
@@ -83,4 +91,8 @@ hr {
 
 .rezultat {
     color: black;
+}
+
+#slikaPas{
+    width: 100px;
 }

@@ -1,6 +1,6 @@
 <?php
 
-class PasController
+class OglasController
 {
 
     public function __construct()
@@ -14,17 +14,17 @@ class PasController
 
     function add()
     {
-
+        
         $kontrola = $this->kontrola();
         if($kontrola===true){
-            Pas::add();
+            Oglas::add();
             $this->index();
         }else{
             $view = new View();
             $view->render(
-                'pas/new',
+                'oglas/new',
                 [
-                    "poruka"=>$kontrola
+                "poruka"=>$kontrola
                 ]
             );
         }
@@ -36,14 +36,14 @@ class PasController
         $_POST["sifra"]=$id;
         $kontrola = $this->kontrola();
         if($kontrola===true){
-            Pas::update($id);
+            Oglas::update($id);
             $this->index();
         }else{
             $view = new View();
             $view->render(
-                'pas/edit',
+                'oglas/edit',
                 [
-                    "poruka"=>$kontrola
+                "poruka"=>$kontrola
                 ]
             );
         }
@@ -52,32 +52,32 @@ class PasController
 
     function delete($id)
     {
-        Pas::delete($id);
-        $this->index();
+        Oglas::delete($id);
+            $this->index();
     }
 
     function kontrola()
     {
-        if(Request::post("ime")===""){
-            return "Ime obavezno";
+        if(Request::post("naziv")===""){
+            return "Naziv obavezno";
         }
 
-        if(strlen(Request::post("ime"))>50){
-            return "Ime ne smije biti veći od 50 znakova";
+        if(strlen(Request::post("naziv"))>50){
+            return "Naziv ne smije biti veći od 50 znakova";
         }
 
         $db = Db::getInstance();
-        $izraz = $db->prepare("select count(sifra) from pas where ime=:ime and sifra<>:sifra");
-        $izraz->execute(["ime"=>Request::post("ime"), "sifra" => Request::post("sifra")]);
+        $izraz = $db->prepare("select count(sifra) from oglas where naziv=:naziv and sifra<>:sifra");
+        $izraz->execute(["naziv"=>Request::post("naziv"), "sifra" => Request::post("sifra")]);
         $ukupno = $izraz->fetchColumn();
         if($ukupno>0){
-            return "Ime postoji, odaberite drugo";
+            return "Naziv postoji, odaberite drugi";
         }
 
-//
-//        if(Request::post("velicina")===""){
-//            return "Velicina obavezna";
-//        }
+
+        if(intval(Request::post("datumOglasa"))<=0){
+            return "Datum oglasa nije broj ili je manje od nula";
+        }
 
 
         return true;
@@ -87,9 +87,9 @@ class PasController
     {
         $view = new View();
         $view->render(
-            'pas/new',
+            'oglas/new',
             [
-                "poruka"=>""
+            "poruka"=>""
             ]
         );
     }
@@ -97,15 +97,20 @@ class PasController
     function prepareedit($id)
     {
         $view = new View();
-        $pas = Pas::find($id);
-        $_POST["ime"]=$pas->ime;
-        $_POST["slika"]=$pas->slika;
-        $_POST["sifra"]=$pas->sifra;
+        $oglas = Oglas::find($id);
+        $_POST["naziv"]=$oglas->naziv;
+        $_POST["datumOglasa"]=$oglas->datumOglasa;
+        $_POST["slika"]=$oglas->slika;
+        // $_POST["aktivan"]=$oglas->aktivan;
+        $_POST["aktivan"]=$oglas->aktivan ? "on" : "";
+        $_POST["pas"]=$oglas->pas;
+        $_POST["osoba"]=$oglas->osoba;
+    
 
         $view->render(
-            'pas/edit',
+            'oglas/edit',
             [
-                "poruka"=>""
+            "poruka"=>""
             ]
         );
     }
@@ -114,9 +119,9 @@ class PasController
     function index(){
         $view = new View();
         $view->render(
-            'pas/index',
+            'oglas/index',
             [
-                "psi"=>Pas::read()
+            "oglas"=>Oglas::read()
             ]
         );
     }

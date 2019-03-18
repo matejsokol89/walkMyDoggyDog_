@@ -1,3 +1,4 @@
+<?php include_once "head.phtml" ?>
 <a href="<?php echo App::config("url") ?>pas/prepareadd" class="success button expanded">
     Dodaj novog psa
 </a>
@@ -10,10 +11,10 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach($pas as $pas): ?>
+        <?php foreach($psi as $pas): ?>
         <tr>
             <td><?php echo $pas->ime ?></td>
-            <td><?php echo $pas->slika ?></td>
+            <td id="slikaPas"><img src="<?php echo $pas->slika ?>" /></td>
 
 <!--            <td>-->
 <!--            -->

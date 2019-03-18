@@ -8,17 +8,12 @@ class Pas
         $db = Db::getInstance();
         $izraz = $db->prepare("
 
-                   select
-                   a.sifra,
-                   a.ime,
-                   a.slika,
-                   count(b.pas) as ukupno from
-                   pas a left join o_p b on a.sifra=b.pas
-                   group by
-                   a.sifra,
-                   a.ime,
-                   a.slika
-                   order by a.ime
+                select 
+                sifra,
+                ime,
+                slika
+                from pas
+                order by ime
 
        ");
         $izraz->execute();

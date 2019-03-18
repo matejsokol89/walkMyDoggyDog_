@@ -9,24 +9,15 @@ class Osoba
        $izraz = $db->prepare("
 
                    select
-                   a.sifra,
-                   a.ime,
-                   a.prezime,
-                   a.email,
-                   a.adresa,
-                   a.mobitel,
-                   a.slika,
-                   count(b.osoba) as ukupno from
-                   osoba a left join o_p b on a.sifra=b.osoba
-                   group by
-                   a.sifra,
-                   a.ime,
-                   a.prezime,
-                   a.email,
-                   a.adresa,
-                   a.mobitel,
-                   a.slika
-                   order by a.ime
+                   sifra,
+                   ime,
+                   prezime,
+                   email,
+                   adresa,
+                   mobitel,
+                   slika
+                   from osoba
+                   order by ime
 
        ");
        $izraz->execute();
