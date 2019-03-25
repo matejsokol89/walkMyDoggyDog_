@@ -1,6 +1,6 @@
 <?php
 
-class OsobaController
+class OsobaController extends ProtectedController
 {
 
     public function __construct()
@@ -59,11 +59,11 @@ class OsobaController
     function kontrola()
     {
         if(Request::post("ime")===""){
-            return "Naziv obavezno";
+            return "Ime obavezno";
         }
 
         if(strlen(Request::post("ime"))>50){
-            return "Naziv ne smije biti veći od 50 znakova";
+            return "Ime ne smije biti veći od 50 znakova";
         }
 
         $db = Db::getInstance();
@@ -71,7 +71,7 @@ class OsobaController
         $izraz->execute(["ime"=>Request::post("ime"), "sifra" => Request::post("sifra")]);
         $ukupno = $izraz->fetchColumn();
         if($ukupno>0){
-            return "Naziv postoji, odaberite drugi";
+            return "Ime postoji, odaberite drugi";
         }
 
 
@@ -109,6 +109,7 @@ class OsobaController
 //        $_POST["verificiran"]=$smjer->verificiran ? "on" : "";
         $_POST["mobitel"]=$osoba->mobitel;
         $_POST["slika"]=$osoba->slika;
+        $_POST["pas"]=$oglas->pas;
         $_POST["sifra"]=$osoba->sifra;
 
         $view->render(

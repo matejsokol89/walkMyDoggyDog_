@@ -1,6 +1,6 @@
 <?php
 
-class PasController
+class PasController extends ProtectedController
 {
 
     public function __construct()

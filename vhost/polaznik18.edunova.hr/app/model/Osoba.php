@@ -9,15 +9,27 @@ class Osoba
        $izraz = $db->prepare("
 
                    select
-                   sifra,
-                   ime,
-                   prezime,
-                   email,
-                   adresa,
-                   mobitel,
-                   slika
-                   from osoba
-                   order by ime
+                   a.sifra,
+                   a.ime,
+                   a.prezime,
+                   a.email,
+                   a.adresa,
+                   a.mobitel,
+                   a.slika,
+                   a.pas,
+                   b.ime as pas_ime,
+                   count(b.sifra) as ukupno from
+                   osoba a left join pas b on a.pas=b.sifra
+                   group by 
+                   a.sifra,
+                   a.ime,
+                   a.prezime,
+                   a.email,
+                   a.adresa,
+                   a.mobitel,
+                   a.slika,
+                   a.pas
+                   order by a.ime
 
        ");
        $izraz->execute();
@@ -43,8 +55,8 @@ class Osoba
     public static function add()
     {
         $db = Db::getInstance();
-        $izraz = $db->prepare("insert into osoba (ime,prezime,email,adresa,mobitel,slika)
-        values (:ime,:prezime,:email,:adresa,:mobitel,:slika)");
+        $izraz = $db->prepare("insert into osoba (ime,prezime,email,adresa,mobitel,slika,pas)
+        values (:ime,:prezime,:email,:adresa,:mobitel,:slika,:pas)");
         $izraz->execute(self::podaci());
     }
 
@@ -57,7 +69,8 @@ class Osoba
         email=:email,
         adresa=:adresa,
         mobitel=:mobitel,
-        slika=:slika
+        slika=:slika,
+        pas=:pas,
         where sifra=:sifra");
         $podaci = self::podaci();
         $podaci["sifra"]=$id;
@@ -80,7 +93,8 @@ class Osoba
             "email"=>Request::post("email"),
             "adresa"=>Request::post("adresa"),
             "mobitel"=>Request::post("mobitel"),
-            "slika"=>Request::post("slika")
+            "slika"=>Request::post("slika"),
+            "pas"=>Request::post("pas")
         ];
     }
 

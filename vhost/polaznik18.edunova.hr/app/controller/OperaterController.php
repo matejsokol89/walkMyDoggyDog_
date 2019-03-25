@@ -1,6 +1,6 @@
 <?php
 
-class OperaterController{
+class OperaterController extends ProtectedController{
 
     public function __construct(){
         if(!Session::getInstance()->isLogiran()){

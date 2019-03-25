@@ -10,37 +10,34 @@ prezime varchar(50) not null,
 email varchar(50) not null,
 adresa varchar(50) not null,
 mobitel int not null,
-slika varchar(50) not null
+slika varchar(250) not null,
+pas int not null
 );
 
 create table pas(
 sifra int not null primary key auto_increment,
 ime varchar(50) not null,
-slika varchar(250) not null
+slika varchar(250) not null,
+vrsta int not null
 );
 
 create table vrsta(
 sifra int not null primary key auto_increment,
 vrsta varchar(50) not null,
-velicina varchar(50) not null,
-pas int not null
+velicina varchar(50) not null
 );
 
-
-create table o_p(
-osoba int not null,
-pas int not null
-);
 
 
 
 create table oglas(
 sifra int not null primary key auto_increment,
 naziv varchar(50) not null,
+opis varchar(250) not null,
 datumOglasa datetime,
-slika blob not null,
+slika varchar(250) not null,
 aktivan boolean not null,
-pas int not null
+osoba int not null
 );
 
 create table operater(
@@ -60,26 +57,33 @@ insert into operater (ime,prezime,email,lozinka) values
 
 );
 
-insert into osoba (ime,prezime,email,adresa,mobitel,slika) values
+insert into osoba (ime,prezime,email,adresa,mobitel,slika,pas) values
 (
 	'Matej',
 	'Sokol',
 	'sokolvm@gmail.com',
 	'Crkvena 61',
 	0977137631,
-	'slika'
+	'slika',
+	1
 
 );
-insert into pas (ime,slika) values
+insert into pas (ime,slika,vrsta) values
 (
 	'Kika',
-	'slika'
+	'slika',
+	 1
+		
+);
+insert into vrsta (vrsta,velicina) values
+(
+	'Husky',
+	'srednja'
 );
 
 
 
 
-alter table oglas add foreign key (pas) references pas(sifra);
-alter table vrsta add foreign key (pas) references pas(sifra);
-alter table o_p add foreign key (pas) references pas(sifra);
-alter table o_p add foreign key (osoba) references osoba(sifra);
+alter table osoba add foreign key (pas) references pas(sifra);
+alter table oglas add foreign key (osoba) references osoba(sifra);
+alter table pas add foreign key (vrsta) references vrsta(sifra);

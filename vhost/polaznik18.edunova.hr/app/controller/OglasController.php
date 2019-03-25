@@ -103,7 +103,6 @@ class OglasController
         $_POST["slika"]=$oglas->slika;
         // $_POST["aktivan"]=$oglas->aktivan;
         $_POST["aktivan"]=$oglas->aktivan ? "on" : "";
-        $_POST["pas"]=$oglas->pas;
         $_POST["osoba"]=$oglas->osoba;
     
 

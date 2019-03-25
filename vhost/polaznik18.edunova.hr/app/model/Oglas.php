@@ -14,20 +14,16 @@ class Oglas
                     a.datumOglasa,
                     a.slika,
                     a.aktivan,
-                    a.pas,
                     a.osoba,
                     b.ime as osoba_ime,
-                    c.ime as pas_ime,
                     count(b.sifra) as ukupno from
                     oglas a left join osoba b on a.osoba=b.sifra 
-                    left join pas c on a.pas=c.sifra
                     group by
                     a.sifra,
                     a.naziv,
                     a.datumOglasa,
                     a.slika,
                     a.aktivan,
-                    a.pas,
                     a.osoba
                     order by a.naziv
 
@@ -47,8 +43,8 @@ class Oglas
     public static function add()
     {
         $db = Db::getInstance();
-        $izraz = $db->prepare("insert into oglas (naziv,datumOglasa,aktivan,slika,pas,osoba)
-        values (:naziv,:datumOglasa,:aktivan,:slika,:pas,:osoba)");
+        $izraz = $db->prepare("insert into oglas (naziv,datumOglasa,aktivan,slika,osoba)
+        values (:naziv,:datumOglasa,:aktivan,:slika,:osoba)");
         $izraz->execute(self::podaci());
     }
 
@@ -60,7 +56,6 @@ class Oglas
         datumOglasa=:datumOglasa,
         aktivan=:aktivan,
         slika=:slika,
-        pas=:pas,
         osoba=:osoba,
         where sifra=:sifra");
         $podaci = self::podaci();
@@ -84,7 +79,6 @@ class Oglas
             "slika"=>Request::post("slika"),
             // "aktivan"=>Request::post("aktivan"),
             "aktivan"=>Request::post("aktivan")==="on" ? true : false,
-            "pas"=>Request::post("pas"),
             "osoba"=>Request::post("osoba")
          
         ];
