@@ -15,9 +15,9 @@ class Oglas
                     a.slika,
                     a.aktivan,
                     a.osoba,
-                    b.ime as osoba_ime,
-                    count(b.sifra) as ukupno from
-                    oglas a left join osoba b on a.osoba=b.sifra 
+                    b.ime as osoba_ime
+                    from oglas a left join
+                    osoba b on a.osoba=b.sifra 
                     group by
                     a.sifra,
                     a.naziv,
@@ -56,7 +56,7 @@ class Oglas
         datumOglasa=:datumOglasa,
         aktivan=:aktivan,
         slika=:slika,
-        osoba=:osoba,
+        osoba=:osoba
         where sifra=:sifra");
         $podaci = self::podaci();
         $podaci["sifra"]=$id;

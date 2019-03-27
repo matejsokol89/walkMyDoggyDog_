@@ -109,7 +109,7 @@ class OsobaController extends ProtectedController
 //        $_POST["verificiran"]=$smjer->verificiran ? "on" : "";
         $_POST["mobitel"]=$osoba->mobitel;
         $_POST["slika"]=$osoba->slika;
-        $_POST["pas"]=$oglas->pas;
+        $_POST["pas"]=$osoba->pas;
         $_POST["sifra"]=$osoba->sifra;
 
         $view->render(

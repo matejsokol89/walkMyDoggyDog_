@@ -12,14 +12,13 @@
     <input type="text" name="slika"
     value="<?php echo Request::post("slika") ?>" />
   </label>
-
-  <label>Osoba
-    <input type="number" name="osoba"
-    value="<?php echo Request::post("osoba") ?>" />
-  </label>
   <label>Aktivan
     <input type="checkbox" name="aktivan" 
     <?php if(Request::post("aktivan")==="on"){
         echo "checked";
-    } ?>
-     />
+    } ?> />
+    </label>
+    <label>Osoba
+    <input type="number" name="osoba"
+    value="<?php echo Request::post("osoba") ?>" />
+  </label>

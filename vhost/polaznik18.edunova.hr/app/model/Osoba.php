@@ -17,9 +17,9 @@ class Osoba
                    a.mobitel,
                    a.slika,
                    a.pas,
-                   b.ime as pas_ime,
-                   count(b.sifra) as ukupno from
-                   osoba a left join pas b on a.pas=b.sifra
+                   b.ime as pas_ime
+                   from osoba a left join
+                   pas b on a.pas=b.sifra
                    group by 
                    a.sifra,
                    a.ime,
@@ -70,12 +70,14 @@ class Osoba
         adresa=:adresa,
         mobitel=:mobitel,
         slika=:slika,
-        pas=:pas,
+        pas=:pas
         where sifra=:sifra");
         $podaci = self::podaci();
         $podaci["sifra"]=$id;
         $izraz->execute($podaci);
     }
+
+
 
     public static function delete($id)
     {
