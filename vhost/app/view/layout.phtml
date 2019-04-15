@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <?php include_once "head.phtml" ?>
+  </head>
+  <body>
+  <?php include_once "izbornik.phtml" ?>
+
+ 
+            <div id="callout1" class="callout large-11 medium-11 small-12 columns" style="min-height: 400px;">
+                <?php echo $content ?>
+
+            </div>
+         
+
+
+        <div class="">
+           &copy; Matej Sokol <?php echo date("Y") ?>
+        </div>
+        </div>
+    </div>
+    <script src="<?php echo App::config("url") ?>public/js/vendor/jquery.js"></script>
+    <script src="<?php echo App::config("url") ?>public/js/vendor/what-input.js"></script>
+    <script src="<?php echo App::config("url") ?>public/js/vendor/foundation.js"></script>
+    <script src="<?php echo App::config("url") ?>public/js/app.js"></script>
+  </body>

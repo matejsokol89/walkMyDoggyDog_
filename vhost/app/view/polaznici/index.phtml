@@ -1,0 +1,36 @@
+<a href="<?php echo App::config("url") ?>polaznik/prepareadd" class="success button expanded">
+    Dodaj novog polaznika
+</a>    
+<div class="grid-x">
+    <?php foreach($polaznici as $p): ?>
+    <div class="cell large-3">
+        <div class="success callout operateri">
+            <img src="https://randomuser.me/api/portraits/<?php echo rand(1,10)<5 ? "women" : "men" ?>/<?php echo rand(1,100) ?>.jpg" alt="" />
+            <h1><?php echo $p->ime?>
+    <br />
+    <?php echo $p->prezime?>
+    </h1>
+    <?php echo $p->email?>
+    <hr />
+    <a href="<?php echo App::config("url") ?>polaznik/prepareedit/<?php echo $p->sifra ?>">
+        <i class="fas fa-edit fa-2x"></i>
+    </a>
+
+    <?php if($p->brojgrupa==0): ?>
+        <a style="color: red;"
+            href="<?php echo App::config("url") ?>polaznik/delete/<?php echo $p->sifra ?>">
+            <i class="fas fa-trash fa-2x"></i>
+        </a>
+    <?php endif; ?>
+
+    </div>
+    </div>
+
+    <?php endforeach; ?>
+</div>
+<nav aria-label="Pagination">
+  <ul class="pagination text-center">
+    <li class="pagination-previous"><a href="<?php echo App::config("url") ?>polaznik/index/<?php echo $prethodna ?>" aria-label="Next page">Prethodna <span class="show-for-sr">page</span></a></li>
+    <li class="pagination-next"><a href="<?php echo App::config("url") ?>polaznik/index/<?php echo $sljedeca ?>" aria-label="Next page">Sljedeća <span class="show-for-sr">page</span></a></li>
+  </ul>
+</nav>
