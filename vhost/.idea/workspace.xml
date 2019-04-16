@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02673b96-4185-48a8-b275-d9876e01721c" name="Default Changelist" comment="" />
+    <list default="true" id="02673b96-4185-48a8-b275-d9876e01721c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.idea/predavac01.edunova.hr.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/CurlController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/IndexController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/KontaktController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OglasController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OnamaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OperaterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/OsobaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PasController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/PolaznikController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/ProtectedController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/controller/SmjerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/App.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Oglas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Operater.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Osoba.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Pas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Polaznik.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Request.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/Smjer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/model/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/curl.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/curldetalji.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/head.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/izbornik.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/kontakt.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/layout.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/oglas/edit.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/oglas/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/oglas/kontrole.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/oglas/new.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/onama.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/operateri/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/edit.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/kontrole.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/osoba/new.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/edit.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/kontrole.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/pas/new.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/polaznici/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/prijava.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/smjerovi/edit.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/smjerovi/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/smjerovi/kontrole.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/app/view/smjerovi/new.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/css/foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/css/foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/img/Edunova.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/img/Wintery-Sunburst.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/img/walking-dogs-clipart-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/img/walkingdog.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/js/vendor/foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/js/vendor/foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/js/vendor/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/public/js/vendor/what-input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaznik18.edunova.hr/skriptapp18.sql" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,16 +89,24 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -44,34 +126,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="predavac01.edunova.hr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predavac01.edunova.hr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="predavac01.edunova.hr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predavac01.edunova.hr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="predavac01.edunova.hr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predavac01.edunova.hr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="predavac01.edunova.hr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predavac01.edunova.hr" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -104,17 +160,17 @@
       <updated>1550139273599</updated>
       <workItem from="1550139275666" duration="50000" />
       <workItem from="1550140490429" duration="263000" />
+      <workItem from="1555429072656" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313000" />
+    <option name="totallyTimeSpent" value="334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="112" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -139,18 +195,21 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/app/view/layout.phtml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/layout.phtml">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

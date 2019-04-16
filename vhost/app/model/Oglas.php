@@ -10,6 +10,7 @@ class Oglas
 
        select
        a.sifra,
+       a.opis,
        a.naziv,
        a.datumOglasa,
        a.slika,
@@ -20,6 +21,7 @@ class Oglas
        osoba b on a.osoba=b.sifra 
        group by
        a.sifra,
+       a.opis,
        a.naziv,
        a.datumOglasa,
        a.slika,
@@ -44,7 +46,7 @@ class Oglas
     {
         $db = Db::getInstance();
         $izraz = $db->prepare("insert into oglas (naziv,opis,datumOglasa,aktivan,slika,osoba)
-        values (:naziv,:datumOglasa,:opis,:aktivan,:slika,:osoba)");
+        values (:naziv,:opis,:datumOglasa,:aktivan,:slika,:osoba)");
         $izraz->execute(self::podaci());
     }
 
