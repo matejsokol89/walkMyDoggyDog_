@@ -1,0 +1,143 @@
+
+
+<?php 
+  $head = "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">";
+
+ $js="
+ <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
+ <script>
+ var putanja=\"" . APP::config("url") .  "\";
+ let sifraGrupa = " . Request::post("sifra") .";
+ </script>
+ <script src=\"" . APP::config("url") . "public/js/grupe/edit.js\"></script>";
+?>
+
+
+<style>
+span{
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.4rem !important;
+  cursor: pointer !important;
+}
+.podebljano{
+  font-weight: bold;
+}
+</style>
+<form class="log-in-form" method="post" 
+action="<?php echo App::config("url") ?>grupa/edit/<?php echo Request::post("sifra") ?>">
+
+
+<div class="grid-x">
+<div class="large-3 columns">
+        
+  
+
+  <label>Naziv
+    <input type="text" name="naziv" 
+    value="<?php echo Request::post("naziv") ?>" />
+  </label>
+
+  <label for="smjer">Smjer</label>
+  <select name="smjer" id="smjer">
+  <option value="0">Odaberi smjer</option>
+
+  <?php foreach(Smjer::read() as $smjer): ?>
+
+    
+
+    <option 
+
+      <?php if(Request::post("smjer")==$smjer->sifra):?>
+      selected="selected" 
+      <?php endif;?>
+
+      value="<?php echo $smjer->sifra ?>"><?php echo $smjer->naziv ?></option>
+
+  <?php endforeach; ?>
+
+  </select>
+
+
+
+  <label for="predavac">Predavač</label>
+  <select name="predavac" id="predavac">
+  <option value="0">Odaberi predavača</option>
+  
+  <?php foreach(Predavac::read() as $predavac): ?>
+
+    
+
+    <option 
+
+      <?php if(Request::post("predavac")==$predavac->sifra):?>
+      selected="selected" 
+      <?php endif;?>
+
+      value="<?php echo $predavac->sifra ?>"><?php echo $predavac->ime . " " . $predavac->prezime ?></option>
+
+  <?php endforeach; ?>
+
+  </select>
+
+
+<label>Datum početka
+    <input type="date" name="datumpocetka" 
+    value="<?php 
+    if(Request::post("datumpocetka")!=null){
+      echo date("Y-m-d",strtotime(Request::post("datumpocetka")));
+    }
+     ?>" />
+  </label>
+
+  <label>Broj polaznika
+    <input type="number" name="brojpolaznika" 
+    value="<?php echo Request::post("brojpolaznika") ?>" />
+  </label>
+
+  </div>
+  <div class="large-1 columns">
+  </div>
+    <div class="large-8 columns" style="overflow: auto; max-height: 400px;">
+    <div class="callout">
+      traži polaznika
+      <input type="text" id="uvjet">
+
+
+        Polaznici na grupi
+        <table>
+          <thead>
+            <tr>
+              <th>Ime i prezime</th>
+              <th>Akcija</th>
+            </tr>
+          </thead>
+          <tbody id="podaci">
+          <?php foreach(Polaznik::readGroups(Request::post("sifra")) as $p): ?>
+            <tr>
+              <td><?php echo $p->polaznik ?></td>
+              <td> <a class="obrisi" id="p_<?php echo $p->sifra ?>" href="#">Obriši</a> </td>
+            </tr>
+          <?php endforeach;?>
+          </tbody>
+        </table>
+       </div>
+    </div>
+</div>
+
+  
+ <div class="grid-x">
+    <div class="large-6 columns" style="padding: 10px;">
+        <a href="<?php echo App::config("url") ?>grupa/index" class="alert button expanded">
+            Odustani
+        </a>
+    </div>
+    <div class="large-6 columns"  style="padding: 10px;">
+        <input type="submit" class="success button expanded" value="Promjeni" />
+    </div>
+ </div>
+  
+
+</form>
+<?php echo $poruka ?>
+

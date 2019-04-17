@@ -1,0 +1,46 @@
+<a href="<?php echo App::config("url") ?>grupa/add" class="success button expanded">
+    Dodaj novu grupu
+</a>
+<table>
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th class="hide-for-small-only">Smjer</th>
+            <th class="hide-for-small-only">Predavač</th>
+            <th class="hide-for-small-only">Datum početka</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($grupe as $grupa): ?>
+        <tr>
+            <td><?php echo $grupa->naziv ?></td>
+            <td class="hide-for-small-only"><?php echo $grupa->smjer ?></td>
+            <td class="hide-for-small-only"><?php 
+            
+            echo $grupa->predavac==null ? "Nije definirano" : $grupa->predavac; ?></td>
+            <td class="hide-for-small-only"><?php 
+            if($grupa->datumpocetka!=null){
+                echo date("d. m. Y.",strtotime($grupa->datumpocetka));
+              }else{
+                  echo "Nije definirano";
+              }
+          ?></td>
+        
+            <td> 
+                <a href="<?php echo App::config("url") ?>grupa/prepareedit/<?php echo $grupa->sifra ?>">
+                    <i class="fas fa-edit fa-2x"></i>
+                </a>
+
+                <?php if($grupa->ukupno==0): ?>
+                    <a style="color: red;"
+                     href="<?php echo App::config("url") ?>grupa/delete/<?php echo $grupa->sifra ?>">
+                        <i class="fas fa-trash fa-2x"></i>
+                    </a>
+                <?php endif; ?>
+            
+             </td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

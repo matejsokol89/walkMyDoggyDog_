@@ -1,0 +1,34 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.large-10.medium-10.small-12.columns>h1{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-edit{
+    color: green;
+}
+
+.callout h1 {
+    font-size: 2rem;
+}
+.operateri {
+    text-align: center;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.operateri:hover { 
+    background-color: #bffad4;
+  }
+
+@media screen and (max-width: 400px){
+    .izbornikStavke{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,40 @@
+<form class="log-in-form" method="post" 
+action="<?php echo App::config("url") ?>polaznik/edit/<?php echo Request::post("sifra") ?>">
+
+  <label>OIB
+    <input type="text" name="oib" 
+    value="<?php echo Request::post("oib") ?>" />
+  </label>
+  <label>Ime
+    <input type="text" name="ime" 
+    value="<?php echo Request::post("ime") ?>" />
+  </label>
+  <label>Prezime
+    <input type="text" name="prezime" 
+    value="<?php echo Request::post("prezime") ?>" />
+  </label>
+  <label>Email
+    <input type="text" name="email" 
+    value="<?php echo Request::post("email") ?>" />
+  </label>
+  <label>Broj ugovora
+    <input type="text" name="brojugovora" 
+    value="<?php echo Request::post("brojugovora") ?>" />
+  </label>
+
+  <input type="hidden" name="sifraosoba" value="<?php echo Request::post("sifraosoba") ?>">
+ 
+ <div class="grid-x">
+    <div class="large-6 columns" style="padding: 10px;">
+        <a href="<?php echo App::config("url") ?>polaznik/index" class="alert button expanded">
+            Odustani
+        </a>
+    </div>
+    <div class="large-6 columns"  style="padding: 10px;">
+        <input type="submit" class="success button expanded" value="Promjeni" />
+    </div>
+ </div>
+  
+
+</form>
+<?php echo $poruka ?>
