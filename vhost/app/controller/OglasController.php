@@ -1,6 +1,6 @@
 <?php
 
-class OglasController
+class OglasController extends ProtectedController
 {
 
     public function __construct()
@@ -52,14 +52,14 @@ class OglasController
 
     function delete($id)
     {
-        Oglas::delete($id);
+            Oglas::delete($id);
             $this->index();
     }
 
     function kontrola()
     {
         if(Request::post("naziv")===""){
-            return "Naziv obavezno";
+            return "Naziv oglasa je obavezan";
         }
 
         if(strlen(Request::post("naziv"))>50){
@@ -67,16 +67,20 @@ class OglasController
         }
 
         $db = Db::getInstance();
-        $izraz = $db->prepare("select count(sifra) from oglas where naziv=:naziv and sifra<>:sifra");
-        $izraz->execute(["naziv"=>Request::post("naziv"), "sifra" => Request::post("sifra")]);
+        $izraz = $db->prepare("select count(sifra) from osoba where ime=:ime and sifra<>:sifra");
+        $izraz->execute(["ime"=>Request::post("ime"), "sifra" => Request::post("sifra")]);
         $ukupno = $izraz->fetchColumn();
         if($ukupno>0){
-            return "Naziv postoji, odaberite drugi";
+            return "Ime postoji, odaberite drugi";
         }
 
 
         if(intval(Request::post("datumOglasa"))<=0){
-            return "Datum oglasa nije broj ili je manje od nula";
+            return "Mobitel nije broj ili je manje od nula";
+        }
+
+        if(Request::post("opis")===""){
+            return "Opis je obavezan";
         }
 
 
@@ -101,11 +105,11 @@ class OglasController
         $_POST["naziv"]=$oglas->naziv;
         $_POST["opis"]=$oglas->opis;
         $_POST["datumOglasa"]=$oglas->datumOglasa;
+//        $_POST["verificiran"]=$smjer->verificiran ? "on" : "";
         $_POST["slika"]=$oglas->slika;
-        // $_POST["aktivan"]=$oglas->aktivan;
-        $_POST["aktivan"]=$oglas->aktivan ? "on" : "";
-        $_POST["sifra"]=$oglas->osoba;
-    
+        $_POST["aktivan"]=$oglas->aktivan;
+        $_POST["osoba"]=$oglas->osoba;
+        //$_POST["sifra"]=$oglas->sifra;
 
         $view->render(
             'oglas/edit',

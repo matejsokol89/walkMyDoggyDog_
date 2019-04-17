@@ -100,7 +100,9 @@ class PasController extends ProtectedController
         $pas = Pas::find($id);
         $_POST["ime"]=$pas->ime;
         $_POST["slika"]=$pas->slika;
+        $_POST["vrsta"]=$pas->vrsta;
         $_POST["sifra"]=$pas->sifra;
+
 
         $view->render(
             'pas/edit',
@@ -116,7 +118,7 @@ class PasController extends ProtectedController
         $view->render(
             'pas/index',
             [
-                "psi"=>Pas::read()
+                "pas"=>Pas::read()
             ]
         );
     }

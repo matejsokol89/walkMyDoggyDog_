@@ -10,8 +10,8 @@ class Oglas
 
        select
        a.sifra,
-       a.opis,
        a.naziv,
+       a.opis,
        a.datumOglasa,
        a.slika,
        a.aktivan,
@@ -21,8 +21,8 @@ class Oglas
        osoba b on a.osoba=b.sifra 
        group by
        a.sifra,
-       a.opis,
        a.naziv,
+       a.opis,
        a.datumOglasa,
        a.slika,
        a.aktivan,
@@ -45,8 +45,8 @@ class Oglas
     public static function add()
     {
         $db = Db::getInstance();
-        $izraz = $db->prepare("insert into oglas (naziv,opis,datumOglasa,aktivan,slika,osoba)
-        values (:naziv,:opis,:datumOglasa,:aktivan,:slika,:osoba)");
+        $izraz = $db->prepare("insert into oglas (naziv,opis,datumOglasa,slika,aktivan,osoba)
+        values (:naziv,:opis,:datumOglasa,:slika,aktivan,:osoba)");
         $izraz->execute(self::podaci());
     }
 
@@ -57,8 +57,8 @@ class Oglas
         naziv=:naziv,
         opis=:opis,
         datumOglasa=:datumOglasa,
-        aktivan=:aktivan,
         slika=:slika,
+        aktivan=:aktivan,
         osoba=:osoba
         where sifra=:sifra");
         $podaci = self::podaci();

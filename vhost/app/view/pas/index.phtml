@@ -7,20 +7,18 @@
         <tr>
             <th>Ime</th>
             <th>Slika</th>
+            <th>Vrsta</th>
             <th>Akcija</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach($psi as $pas): ?>
+        <?php foreach($pas as $pas): ?>
         <tr>
             <td><?php echo $pas->ime ?></td>
             <td id="slikaPas"><img src="<?php echo $pas->slika ?>" /></td>
+            <td><?php echo $pas->pas_vrsta ?></td>
 
-<!--            <td>-->
-<!--            -->
-<!--            <i class="fa--><?php //echo $smjer->verificiran ? "s" : "r" ?><!-- fa-check-square"></i>-->
-<!--            -->
-<!--            </td>-->
+
             <td> 
                 <a href="<?php echo App::config("url") ?>pas/prepareedit/<?php echo $pas->sifra ?>">
                     <i style ="color:green;" class="fas fa-edit fa-2x"></i>

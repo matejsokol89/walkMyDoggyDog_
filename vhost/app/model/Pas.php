@@ -9,11 +9,13 @@ class Pas
         $izraz = $db->prepare("
 
                 select 
-                sifra,
-                ime,
-                slika
-                from pas
-                order by ime
+                a.sifra,
+                a.ime,
+                a.slika,
+                a.vrsta,
+                b.vrsta as pas_vrsta
+                from pas a left join
+                vrsta b on a.vrsta=b.sifra
 
        ");
         $izraz->execute();
@@ -33,8 +35,8 @@ class Pas
     public static function add()
     {
         $db = Db::getInstance();
-        $izraz = $db->prepare("insert into pas (ime,slika)
-        values (:ime,:slika)");
+        $izraz = $db->prepare("insert into pas (ime,slika,vrsta)
+        values (:ime,:slika,:vrsta)");
         $izraz->execute(self::podaci());
     }
 
@@ -43,7 +45,8 @@ class Pas
         $db = Db::getInstance();
         $izraz = $db->prepare("update pas set 
         ime=:ime,
-        slika=:slika
+        slika=:slika,
+        vrsta=:vrsta
         where sifra=:sifra");
         $podaci = self::podaci();
         $podaci["sifra"]=$id;
@@ -62,7 +65,9 @@ class Pas
     private static function podaci(){
         return [
             "ime"=>Request::post("ime"),
-            "slika"=>Request::post("slika")
+            "slika"=>Request::post("slika"),
+            "vrsta"=>Request::post("vrsta")
+
         ];
     }
 
