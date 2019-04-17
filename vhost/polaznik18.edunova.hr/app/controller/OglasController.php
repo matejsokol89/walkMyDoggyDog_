@@ -31,6 +31,28 @@ class OglasController extends ProtectedController
 
     }
 
+    // function index($stranica=1){
+    //     if($stranica<=0){
+    //         $stranica=1;
+    //     }
+    //     if($stranica===1){
+    //         $prethodna=1;
+    //     }else{
+    //         $prethodna=$stranica-1;
+    //     }
+    //     $sljedeca=$stranica+1;
+
+    //     $view = new View();
+    //     $view->render(
+    //         'oglas/index',
+    //         [
+    //         "oglas"=>Oglas::read($stranica),
+    //         "prethodna"=>$prethodna,
+    //         "sljedeca"=>$sljedeca
+    //         ]
+    //     );
+    // }
+
     function edit($id)
     {
         $_POST["sifra"]=$id;
@@ -67,16 +89,16 @@ class OglasController extends ProtectedController
         }
 
         $db = Db::getInstance();
-        $izraz = $db->prepare("select count(sifra) from osoba where ime=:ime and sifra<>:sifra");
-        $izraz->execute(["ime"=>Request::post("ime"), "sifra" => Request::post("sifra")]);
+        $izraz = $db->prepare("select count(sifra) from oglas where naziv=:naziv and sifra<>:sifra");
+        $izraz->execute(["naziv"=>Request::post("naziv"), "sifra" => Request::post("sifra")]);
         $ukupno = $izraz->fetchColumn();
         if($ukupno>0){
-            return "Ime postoji, odaberite drugi";
+            return "Naziv postoji, odaberite drugi";
         }
 
 
-        if(intval(Request::post("datumOglasa"))<=0){
-            return "Mobitel nije broj ili je manje od nula";
+        if(date(Request::post("datumOglasa"))<=0){
+            return "Datum oglasa nije broj ili je manje od nula";
         }
 
         if(Request::post("opis")===""){
@@ -109,7 +131,7 @@ class OglasController extends ProtectedController
         $_POST["slika"]=$oglas->slika;
         $_POST["aktivan"]=$oglas->aktivan;
         $_POST["osoba"]=$oglas->osoba;
-        //$_POST["sifra"]=$oglas->sifra;
+        $_POST["sifra"]=$oglas->sifra;
 
         $view->render(
             'oglas/edit',

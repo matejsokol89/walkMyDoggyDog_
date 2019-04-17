@@ -3,36 +3,7 @@
 class Oglas
 {
 
-   public static function read()
-   {
-       $db = Db::getInstance();
-       $izraz = $db->prepare("
 
-       select
-       a.sifra,
-       a.naziv,
-       a.opis,
-       a.datumOglasa,
-       a.slika,
-       a.aktivan,
-       a.osoba,
-       b.ime as osoba_ime
-       from oglas a left join
-       osoba b on a.osoba=b.sifra 
-       group by
-       a.sifra,
-       a.naziv,
-       a.opis,
-       a.datumOglasa,
-       a.slika,
-       a.aktivan,
-       a.osoba
-       order by a.naziv
-
-       ");
-       $izraz->execute();
-       return $izraz->fetchAll();
-   }
 
    public static function find($id)
     {
@@ -46,7 +17,7 @@ class Oglas
     {
         $db = Db::getInstance();
         $izraz = $db->prepare("insert into oglas (naziv,opis,datumOglasa,slika,aktivan,osoba)
-        values (:naziv,:opis,:datumOglasa,:slika,aktivan,:osoba)");
+        values (:naziv,:opis,:datumOglasa,:slika,:aktivan,:osoba)");
         $izraz->execute(self::podaci());
     }
 
@@ -73,6 +44,38 @@ class Oglas
         $podaci = [];
         $podaci["sifra"]=$id;
         $izraz->execute($podaci);
+    }
+    public static function read()
+    {
+        //$poStranici=8;
+        $db = Db::getInstance();
+        $izraz = $db->prepare("
+ 
+        select
+        a.sifra,
+        a.naziv,
+        a.opis,
+        a.datumOglasa,
+        a.slika,
+        a.aktivan,
+        a.osoba,
+        b.ime as osoba_ime
+        from oglas a left join
+        osoba b on a.osoba=b.sifra 
+        group by
+        a.sifra,
+        a.naziv,
+        a.opis,
+        a.datumOglasa,
+        a.slika,
+        a.aktivan,
+        a.osoba
+        order by a.naziv
+ 
+ 
+        ");
+        $izraz->execute();
+        return $izraz->fetchAll();
     }
 
     private static function podaci(){

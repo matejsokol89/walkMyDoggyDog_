@@ -76,11 +76,11 @@ class OsobaController extends ProtectedController
 
 
         if(intval(Request::post("mobitel"))<=0){
-            return "Trajanje nije broj ili je manje od nula";
+            return "Mobitel nije broj ili je manje od nula";
         }
 
         if(Request::post("prezime")===""){
-            return "Cijena obavezno";
+            return "Prezime obavezno";
         }
 
 
