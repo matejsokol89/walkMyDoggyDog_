@@ -3,6 +3,39 @@
 class Oglas
 {
 
+    public static function read($stranica)
+    {
+        $poStranici=8;
+        $db = Db::getInstance();
+        $izraz = $db->prepare("
+ 
+        select
+        a.sifra,
+        a.naziv,
+        a.opis,
+        a.datumOglasa,
+        a.slika,
+        a.aktivan,
+        a.osoba,
+        b.ime as osoba_ime
+        from oglas a left join
+        osoba b on a.osoba=b.sifra 
+        group by
+        a.sifra,
+        a.naziv,
+        a.opis,
+        a.datumOglasa,
+        a.slika,
+        a.aktivan,
+        a.osoba
+        order by a.naziv
+        limit ". (($stranica*$poStranici)- $poStranici)  . ",$poStranici
+ 
+        ");
+        $izraz->execute();
+        return $izraz->fetchAll();
+    }
+
 
 
    public static function find($id)
@@ -45,38 +78,7 @@ class Oglas
         $podaci["sifra"]=$id;
         $izraz->execute($podaci);
     }
-    public static function read()
-    {
-        //$poStranici=8;
-        $db = Db::getInstance();
-        $izraz = $db->prepare("
- 
-        select
-        a.sifra,
-        a.naziv,
-        a.opis,
-        a.datumOglasa,
-        a.slika,
-        a.aktivan,
-        a.osoba,
-        b.ime as osoba_ime
-        from oglas a left join
-        osoba b on a.osoba=b.sifra 
-        group by
-        a.sifra,
-        a.naziv,
-        a.opis,
-        a.datumOglasa,
-        a.slika,
-        a.aktivan,
-        a.osoba
-        order by a.naziv
- 
- 
-        ");
-        $izraz->execute();
-        return $izraz->fetchAll();
-    }
+    
 
     private static function podaci(){
         return [

@@ -31,27 +31,28 @@ class OglasController extends ProtectedController
 
     }
 
-    // function index($stranica=1){
-    //     if($stranica<=0){
-    //         $stranica=1;
-    //     }
-    //     if($stranica===1){
-    //         $prethodna=1;
-    //     }else{
-    //         $prethodna=$stranica-1;
-    //     }
-    //     $sljedeca=$stranica+1;
+    function index($stranica = 1)
+    {
+        if ($stranica <= 0) {
+            $stranica = 1;
+        }
+        if ($stranica === 1) {
+            $prethodna = 1;
+        } else {
+            $prethodna = $stranica - 1;
+        }
+        $sljedeca = $stranica + 1;
+        $view = new View();
+        $view->render(
+            'oglas/index',
+            [
+                "oglas" => Oglas::read($stranica),
+                "prethodna" => $prethodna,
+                "sljedeca" => $sljedeca
+            ]
+        );
+    }
 
-    //     $view = new View();
-    //     $view->render(
-    //         'oglas/index',
-    //         [
-    //         "oglas"=>Oglas::read($stranica),
-    //         "prethodna"=>$prethodna,
-    //         "sljedeca"=>$sljedeca
-    //         ]
-    //     );
-    // }
 
     function edit($id)
     {
@@ -142,13 +143,4 @@ class OglasController extends ProtectedController
     }
 
 
-    function index(){
-        $view = new View();
-        $view->render(
-            'oglas/index',
-            [
-            "oglas"=>Oglas::read()
-            ]
-        );
-    }
 }
