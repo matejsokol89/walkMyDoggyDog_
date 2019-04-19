@@ -20,7 +20,8 @@
             <td><?php echo $oglas->naziv ?></td>
             <td><?php echo $oglas->opis ?></td>
             <td><?php echo $oglas->datumOglasa ?></td>
-            <td><?php echo $oglas->slika ?></td>
+            <td id="slikaPas"><img src="<?php echo $oglas->slika ?>" /></td>
+
             <td><?php echo $oglas->osoba_ime ?></td>
             <td>
             <i class="fa<?php echo $oglas->aktivan ? "s" : "r" ?> fa-check-square"></i>
