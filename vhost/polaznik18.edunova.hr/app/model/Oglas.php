@@ -5,7 +5,7 @@ class Oglas
 
     public static function read($stranica)
     {
-        $poStranici=8;
+        $poStranici=3;
         $db = Db::getInstance();
         $izraz = $db->prepare("
  
@@ -28,7 +28,7 @@ class Oglas
         a.slika,
         a.aktivan,
         a.osoba
-        order by a.naziv
+        order by a.datumOglasa
         limit ". (($stranica*$poStranici)- $poStranici)  . ",$poStranici
  
         ");

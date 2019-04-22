@@ -24,14 +24,14 @@
             <img class="ui centered rounded image" src="<?php echo /* TODO: urlencode */ $oglas->slika ?>" >
             <br>
             <div class="description">
-                <p><b>Iznajmljivac: </b> <?php echo $oglas->osoba_ime ?></p>
+                <p><i style="color: green;" class="fas fa-user"></i> <?php echo $oglas->osoba_ime ?></p>
             </div>
             <div class="content">
-                <span><?php echo date("d-m-Y", strtotime($oglas->datumOglasa)); ?></span>
+                <span><i style="color: green;" class="fas fa-calendar-alt"></i><?php echo date("d-m-Y", strtotime($oglas->datumOglasa)); ?></span>
            
             </div>
             <div class="description">
-            <p><i style="color: green" class="fa<?php echo $oglas->aktivan ? "s" : "r" ?> fa-flag"></i> Oglas <?php echo $oglas->aktivan ? "" : "ne" ?>aktivan</p>            
+            <p><i style="color: green;" class="fa<?php echo $oglas->aktivan ? "s" : "r" ?> fa-flag"></i> Oglas <?php echo $oglas->aktivan ? "" : "ne" ?>aktivan</p>            
             </div>
             <div class="description">
                 <p><?php echo $oglas->opis ?></p>
@@ -48,6 +48,12 @@
     </div>
     
     <?php endforeach;?>
+    <nav aria-label="">
+  <ul class="pagination text-center">
+    <li style="font-size: 2em;" class=""><a href="<?php echo App::config("url") ?>oglas/index/<?php echo $prethodna ?>" aria-label="Next page"><i style="color:gray;" class="fas fa-arrow-left"></i> <span class="show-for-sr">page</span></a></li>
+    <li style="font-size: 2em;" class=""><a href="<?php echo App::config("url") ?>oglas/index/<?php echo $sljedeca ?>" aria-label="Next page"><i style="color:gray;" class="fas fa-arrow-right"></i> <span class="show-for-sr">page</span></a></li>
+  </ul>
+</nav>
 
 </div>
 </body>
