@@ -1,49 +1,55 @@
-<a href="<?php echo App::config("url") ?>osoba/prepareadd" class="success button expanded">
-    Dodaj novu osobu
-</a>
-<table>
-    <thead>
-        <tr>
-            <th>Ime</th>
-            <th>Prezime</th>
-            <th>Email</th>
-            <th>Adresa</th>
-            <th>Mobitel</th>
-            <th>Slika</th>
-            <th>Pas</th>
-            <th>Akcija</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach($osoba as $osoba): ?>
-        <tr>
-            <td><?php echo $osoba->ime ?></td>
-            <td><?php echo $osoba->prezime ?></td>
-            <td><?php echo $osoba->email ?></td>
-            <td><?php echo $osoba->adresa ?></td>
-            <td><?php echo $osoba->mobitel ?></td>
-            <td id="slikaPas"><img src="<?php echo $osoba->slika ?>" /></td>
-            <td><?php echo $osoba->pas_ime ?></td>
+<br>
+<br>
+<table class="ui celled table">
+<a href="<?php echo App::config("url") ?>osoba/prepareadd">
 
-<!--            <td>-->
-<!--            -->
-<!--            <i class="fa--><?php //echo $smjer->verificiran ? "s" : "r" ?><!-- fa-check-square"></i>-->
-<!--            -->
-<!--            </td>-->
-            <td> 
-                <a href="<?php echo App::config("url") ?>osoba/prepareedit/<?php echo $osoba->sifra ?>">
-                    <i style ="color:green;" class="fas fa-edit fa-2x"></i>
-                </a>
+  <thead>
+    <tr>
+    <th>Ime</th>
+    <th>Prezime</th>
+    <th>Email</th>
+    <th>Adresa</th>
+    <th>Mobitel</th>
+    <th>Slika</th>
+    <th>Pas</th>
+    <th>Akcija</th>
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach($osoba as $osoba): ?>
 
-                <?php if($osoba->ukupno==0): ?>
-                    <a style="color: red;"
-                     href="<?php echo App::config("url") ?>osoba/delete/<?php echo $osoba->sifra ?>">
-                        <i class="fas fa-trash fa-2x"></i>
-                    </a>
-                <?php endif; ?>
-            
-             </td>
-        </tr>
-        <?php endforeach;?>
-    </tbody>
+    <tr>
+    <td><?php echo $osoba->ime ?></td>
+    <td><?php echo $osoba->prezime ?></td>
+    <td><?php echo $osoba->email ?></td>
+    <td><?php echo $osoba->adresa ?></td>
+    <td style="border-bottom:1px solid rgba(34, 36, 38, 0.1);"><?php echo $osoba->mobitel ?></td>
+    <td style="border-bottom:1px solid rgba(34, 36, 38, 0.1);" id="slikaPas"><img src="<?php echo $osoba->slika ?>" /></td>
+    <td style="border-bottom:1px solid rgba(34, 36, 38, 0.1);"><?php echo $osoba->pas_ime ?></td>
+    
+    <td style="border-bottom:1px solid rgba(34, 36, 38, 0.1);"> 
+    <a href="<?php echo App::config("url") ?>osoba/prepareedit/<?php echo $osoba->sifra ?>">
+        <i style ="color:green;" class="fas fa-edit fa-2x"></i>
+    </a>
+
+    <?php if($osoba->ukupno==0): ?>
+        <a style="color: red;"
+            href="<?php echo App::config("url") ?>osoba/delete/<?php echo $osoba->sifra ?>">
+            <i class="fas fa-trash fa-2x"></i>
+        </a>
+    <?php endif; ?>   
+    </td> 
+</tr>
+    <?php endforeach;?>
+    
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="4">
+      <div class="positive ui button" style="float: right;">
+      <a href="<?php echo App::config("url") ?>osoba/prepareadd"><div class="ui green button"><i class="paw icon"></i></i>Dodaj</div></a>
+    </div>
+      </th>
+    </tr>
+  </tfoot>
 </table>

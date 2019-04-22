@@ -1,18 +1,60 @@
-<form class="log-in-form" method="post" 
-action="<?php echo App::config("url") ?>osoba/add">
+<br>
+<br>
+<br>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <?php echo App::config("nazivApp") ?></div>
+    <form class="ui form" method="post" 
+action="<?php echo App::config("url") ?>osoba/add/<?php echo Request::post("sifra") ?>">
 
- <?php include_once "kontrole.phtml" ?>
- 
- <div class="grid-x">
-    <div class="large-6 columns" style="padding: 10px;">
-        <a href="<?php echo App::config("url") ?>osoba/index" class="alert button expanded">Odustani</a>
-    </div>
-    <div class="large-6 columns"  style="padding: 10px;">
-        <input type="submit" class="button expanded" value="Dodaj novi" />
-    </div>
- </div>
-  
- 
+        <div class="field">
+            <label>Ime</label>
+            <input type="text" name="ime" 
+    value="<?php echo Request::post("ime") ?>" />
+        </div>
 
-</form>
-<?php echo $poruka ?>
+        <div class="field">
+        <label>Prezime</label>
+        <input type="text" name="prezime"
+    value="<?php echo Request::post("prezime") ?>" />
+        </div>
+        
+        <div class="field">
+        <label>Email</label>
+        <input type="text" name="email"
+    value="<?php echo Request::post("email") ?>" />
+        </div>
+
+        <div class="field">
+        <label>Adresa</label>
+        <input type="text" name="adresa"
+    value="<?php echo Request::post("adresa") ?>" />
+        </div>
+
+        <div class="field">
+        <label>Mobitel</label>
+        <input type="number" name="mobitel"
+    value="<?php echo Request::post("mobitel") ?>" />
+        </div>
+
+        <div class="field">
+        <label>Slika</label>
+        <input type="text" name="slika"
+    value="<?php echo Request::post("slika") ?>" />
+        </div>
+        
+        <div class="field">
+        <label>Pas</label>
+         <input type="number" name="pas"
+    value="<?php echo Request::post("pas") ?>" />
+        </div>
+
+    <div class="ui buttons">
+  <a href="<?php echo App::config("url") ?>osoba/index"><div class="ui button"></i>Odustani</div></a>
+  <div class="or"></div>
+  <input type="submit" class="ui positive button" value="Promjeni" />
+
+</div>
+    </form>
+    <?php echo $poruka ?>
+</div>
+

@@ -1,65 +1,35 @@
-<div class="grid-x">
-    <div class="large-12 medium-12 small-12 columns">
-        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-            <div class="title-bar-title">Izbornik</div>
-        </div>
+<html>
+    <head>
+        <title>Blog App</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 
-        <div class="top-bar" id="example-menu">
-            <div class="top-bar-left">
-                <ul class="dropdown menu izbornikStavke" data-dropdown-menu>
-                <li>
-                        <a href="<?php echo App::config("url")."index" ?>">Početna</a>
+    </head>
+    
+    <body>
+        
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div  class="header item"><i class="paw icon"></i><?php echo App::config("nazivApp") ?></div>
+                <a href="/" class="item"><i style="font-size:160%;" class="fas fa-home"></i></a>
+                <a class="item" href="<?php echo App::config("url")."onama" ?>">O nama</a>
+                <?php if(Session::getInstance()->isLogiran()): ?>
 
-                    </li>
-                    <li>
-                        <a href="<?php echo App::config("url")."onama" ?>">O nama</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo App::config("url")."kontakt" ?>">Kontakt</a>
-                    </li>
+                <a  class="item" href="<?php echo App::config("url")."osoba/index" ?>">Osoba</a>
+                <a  class="item" href="<?php echo App::config("url")."pas/index" ?>">Pas</a>
+                <a  class="item" href="<?php echo App::config("url")."vrsta/index" ?>">Vrsta</a>
+                <a  class="item" href="<?php echo App::config("url")."oglas/index" ?>">Oglas</a>
+                <a  class="item" href="<?php echo App::config("url")."operater/index" ?>">Operateri</a>
+                <?php endif; ?>
 
-                    <?php if(Session::getInstance()->isLogiran()): ?>
-                    <li>
-                        <a href="<?php echo App::config("url")."osoba/index" ?>">Osoba</a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo App::config("url")."pas/index" ?>">Pas</a>
-                    </li>
-
-                    
-                    <li>
-                        <a href="<?php echo App::config("url")."vrsta/index" ?>">Vrsta</a>
-                    </li>
-
-
-                    <li>
-                        <a href="<?php echo App::config("url")."oglas/index" ?>">Oglas</a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo App::config("url")."operater/index" ?>">Operateri</a>
-                    </li>
-                    <?php endif; ?>
-
-
-
-                </ul>
-            </div>
-            <div class="top-bar-right">
-                <ul class="menu izbornikStavke">
-                    <li>
+                <div class="right menu">
                         <?php if(Session::getInstance()->isLogiran()): ?>
-                        <a href="<?php echo App::config("url") ?>admin/odjava">Odjava
+                        <a class="item" href="<?php echo App::config("url") ?>admin/odjava">Odjava
                             <?php echo Session::getInstance()->getUser()->imePrezime ?>
                         </a>
                         <?php else:?>
-                        <a href="<?php echo App::config("url") ?>admin/prijava">Prijava</a>
+                        <a class="item" href="<?php echo App::config("url") ?>admin/prijava">Prijava</a>
                         <?php endif;?>
-                    </li>
-                </ul>
+                </div>
             </div>
         </div>
-    </div>
-</div>

@@ -1,19 +1,27 @@
-<form class="log-in-form" method="post" 
+<br>
+<br>
+<br>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <?php echo App::config("nazivApp") ?></div>
+    <form class="ui form" method="post" 
 action="<?php echo App::config("url") ?>vrsta/edit/<?php echo Request::post("sifra") ?>">
 
- <?php include_once "kontrole.phtml" ?>
- 
- <div class="grid-x">
-    <div class="large-6 columns" style="padding: 10px;">
-        <a href="<?php echo App::config("url") ?>vrsta/index" class="alert button expanded">
-            Odustani
-        </a>
-    </div>
-    <div class="large-6 columns"  style="padding: 10px;">
-        <input type="submit" class="success button expanded" value="Promjeni" />
-    </div>
- </div>
-  
+        <div class="field">
+            <label>Vrsta</label>
+            <input type="text" name="vrsta" 
+    value="<?php echo Request::post("vrsta") ?>" />
+        </div>
 
-</form>
-<?php echo $poruka ?>
+        <div class="field">
+        <label>Veličina</label>
+        <input type="text" name="velicina"
+    value="<?php echo Request::post("velicina") ?>" />
+        </div>
+        
+        <div class="ui buttons">
+  <a href="<?php echo App::config("url") ?>vrsta/index"><div class="ui button"></i>Odustani</div></a>
+  <div class="or"></div>
+  <input type="submit" class="ui positive button" value="Promjeni" />
+    </form>
+    <?php echo $poruka ?>
+</div>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Blog App</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+    </head>
+    
+    <body>
+        
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div  class="header item"><i class="comment outline icon"></i>Blog Site</div>
+                <a href="/" class="item">Home</a>
+                <a href="http://polaznik18.edunova.hr/oglas/prepareadd" class="item">New Post</a>
+            </div>
+        </div>
+<div class="ui main text container">
+    <div class="ui huge header">Blog App</div>
+    <div class="ui top  attached segment">
+        <div class="ui divided items">
+        <?php foreach($oglas as $oglas): ?>
+
+                <div class="item">
+                    <div class="image">
+                        <img src="<?php echo $oglas->slika ?>" >
+                    </div>
+                    <div class="content">
+                         <a class="header" href="<?php echo $oglas->naziv ?>"></a>
+                         <div class="meta">
+                             <span><?php echo $oglas->datumOglasa ?></span>
+                         </div>
+                         <div class="description">
+                             <p><?php echo $oglas->opis ?></p>
+                         </div>
+                         <div class="extra">
+                             <a class="ui floated basic violet button" href="<?php echo App::config("url") ?>oglas/prepareread/<?php echo $oglas->sifra ?>" method="POST">
+                                 Read More
+                                 <i class="right chevron icon"></i>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+                <?php endforeach;?>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

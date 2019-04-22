@@ -1,9 +1,26 @@
-
+<br>
+<br>
+<br>
 <form class="log-in-form" method="post" 
 action="<?php echo App::config("url") ?>admin/login">
-
-  <label>Email
-    <input type="email" name="email" placeholder="sokolvm@gmail.com"
+<div class="page-login">
+  <div class="ui centered grid container">
+    <div class="nine wide column">
+      <div class="ui icon warning message">
+          <i class="lock icon"></i>
+          <div class="content">
+            <div class="header">
+              Login failed!
+            </div>
+            <p><?php echo $poruka ?></p>
+          </div>
+        </div>
+      <div class="ui fluid card">
+        <div class="content">
+        <form class="ui form" method="POST">
+          <div class="field">
+            <label>User</label>
+            <input type="email" name="email" placeholder="sokolvm@gmail.com"
     value="<?php 
     if (isset($_POST[email])){
       echo Request::post("email");
@@ -11,17 +28,24 @@ action="<?php echo App::config("url") ?>admin/login">
       echo App::config("dev") ? "sokolvm@gmail.com" : "";
     }
      ?>">
-  </label>
-  <label>Password
-    <input type="password" name="password" placeholder="t" value="<?php 
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="t" value="<?php 
     if (!isset($_POST[email])){
       echo App::config("dev") ? "t" : "";
     }
     ?>">
-  </label>
- 
-  <p><input type="submit" class="button expanded" value="Log in" /></p>
-
+          </div>
+          <button class="ui primary labeled icon button" type="submit" value="Log in">
+            <i class="unlock alternate icon"></i>
+            Login
+          </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </form>
 <?php echo $poruka ?>
-

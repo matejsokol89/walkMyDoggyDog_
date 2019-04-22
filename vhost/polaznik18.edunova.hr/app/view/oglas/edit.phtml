@@ -1,19 +1,68 @@
-<form class="log-in-form" method="post" 
+<html>
+    <head>
+        <title>Blog App</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+    </head>
+    
+    <body>
+        
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div  class="header item"><i class="paw icon"></i>Blog Site</div>
+                <a href="/" class="item"><i style="font-size:160%;" class="fas fa-home"></i></a>
+                <a href="<?php echo App::config("url") ?>oglas/index" class="item">Odustani</a>
+            </div>
+        </div>
+
+<br>
+<br>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <?php echo App::config("nazivApp") ?></div>
+    <!-- <form class="ui form" action="<?php echo App::config("url") ?>oglas/edit/<?php echo Request::post("sifra") ?>" method="POST"> -->
+    <form class="ui form" method="post" 
 action="<?php echo App::config("url") ?>oglas/edit/<?php echo Request::post("sifra") ?>">
+        <div class="field">
+            <label>Naziv</label>
+            <input type="text" name="naziv" 
+    value="<?php echo Request::post("naziv") ?>" />
+        </div>
+        <div class="field">
+            <label>Opis</label>
+            <!-- <input type="text" name="opis" 
+    value="<?php echo Request::post("opis") ?>" /> -->
+    <textarea name="opis"><?php echo Request::post("opis") ?></textarea>
 
- <?php include_once "kontrole.phtml" ?>
- 
- <div class="grid-x">
-    <div class="large-6 columns" style="padding: 10px;">
-        <a href="<?php echo App::config("url") ?>oglas/index" class="alert button expanded">
-            Odustani
-        </a>
+        </div>
+        <div class="field">
+            <label>Datum oglasa</label>
+            <input type="text" name="datumOglasa"
+    value="<?php echo Request::post("datumOglasa") ?>" />
+        </div>
+        <div class="field">
+            <label>Slika</label>
+            <input type="text" name="slika"
+    value="<?php echo Request::post("slika") ?>" />
+        </div>
+        <div class="field">
+            <label>Aktivan</label>
+            <input type="checkbox" name="aktivan" 
+    <?php if(Request::post("aktivan")==="on"){
+        echo "checked";
+    } ?> />
     </div>
-    <div class="large-6 columns"  style="padding: 10px;">
-        <input type="submit" class="success button expanded" value="Promjeni" />
-    </div>
- </div>
-  
+        <div class="field">
+            <label>Osoba</label>
+            <input type="number" name="osoba"
+    value="<?php echo Request::post("osoba") ?>" />
+            </div>
 
-</form>
-<?php echo $poruka ?>
+        <!-- <input class="ui violet big basic button" type="submit"> -->
+        <input type="submit" class="ui violet big basic button" value="Promjeni" />
+
+    </form>
+    <?php echo $poruka ?>
+</div>
+</body>
+</html>

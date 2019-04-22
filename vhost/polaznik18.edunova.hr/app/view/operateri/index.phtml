@@ -1,15 +1,26 @@
-<div class="grid-x">
-    <?php foreach($operateri as $operater): ?>
-    <div class="cell large-3">
-        <div class="success callout operateri">
-            <h1><?php echo $operater->ime?>
-    <br />
-    <?php echo $operater->prezime?>
-    </h1>
+<br>
+<br>
+<div class="ui card">
+<?php foreach($operateri as $operater): ?>
+
+  <div class="image">
+    <img src="https://scontent.fzag3-1.fna.fbcdn.net/v/t1.0-9/53453079_10219138521798239_6077723901771644928_n.jpg?_nc_cat=103&_nc_ht=scontent.fzag3-1.fna&oh=1f62fcc69e8474078479dec42d5648af&oe=5D342E49">
+  </div>
+  <div class="content">
+    <a class="header"><?php echo $operater->ime?> <?php echo $operater->prezime?> </a>
+    <div class="meta">
+      <span class="date">Joined in 2019</span>
+    </div>
+    <div class="description">
     <?php echo $operater->email?>
-
     </div>
-    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+  <?php endforeach; ?>
 
-    <?php endforeach; ?>
 </div>

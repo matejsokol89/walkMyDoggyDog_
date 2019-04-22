@@ -70,6 +70,22 @@ class Oglas
         $izraz->execute($podaci);
     }
 
+    public static function readAll($id)
+    {
+        $db = Db::getInstance();
+        $izraz = $db->prepare("select 
+        sifra,
+        naziv,
+        opis,
+        datumOglasa,
+        slika,
+        aktivan,
+        osoba
+        from oglas");
+        $izraz->execute();
+        return $izraz->fetchAll();
+    }
+
     public static function delete($id)
     {
         $db = Db::getInstance();

@@ -53,6 +53,25 @@ class OglasController extends ProtectedController
         );
     }
 
+    function read($id)
+    {
+        
+        $kontrola = $this->kontrola();
+        if($kontrola===true){
+            Oglas::readAll($id);
+            $this->index();
+        }else{
+            $view = new View();
+            $view->render(
+                'oglas/show',
+                [
+                "poruka"=>$kontrola
+                ]
+            );
+        }
+
+    }
+
 
     function edit($id)
     {
@@ -98,9 +117,9 @@ class OglasController extends ProtectedController
         }
 
 
-        if(date(Request::post("datumOglasa"))<=0){
-            return "Datum oglasa nije broj ili je manje od nula";
-        }
+        // if(date(Request::post("datumOglasa"))<=0){
+        //     return "Datum oglasa nije broj ili je manje od nula";
+        // }
 
         if(Request::post("opis")===""){
             return "Opis je obavezan";
@@ -115,6 +134,28 @@ class OglasController extends ProtectedController
         $view = new View();
         $view->render(
             'oglas/new',
+            [
+            "poruka"=>""
+            ]
+        );
+    }
+
+
+    function prepareread($id)
+    {
+        $view = new View();
+//         $oglas = Oglas::find($id);
+//         $_POST["naziv"]=$oglas->naziv;
+//         $_POST["opis"]=$oglas->opis;
+//         $_POST["datumOglasa"]=$oglas->datumOglasa;
+// //        $_POST["verificiran"]=$smjer->verificiran ? "on" : "";
+//         $_POST["slika"]=$oglas->slika;
+//         $_POST["aktivan"]=$oglas->aktivan;
+//         $_POST["osoba"]=$oglas->osoba;
+//         $_POST["sifra"]=$oglas->sifra;
+
+        $view->render(
+            'oglas/show',
             [
             "poruka"=>""
             ]

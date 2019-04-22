@@ -1,36 +1,42 @@
-<?php include_once "head.phtml" ?>
-<a href="<?php echo App::config("url") ?>vrsta/prepareadd" class="success button expanded">
-    Dodaj novu vrstu
-</a>
-<table>
-    <thead>
-        <tr>
-            <th>Vrsta</th>
-            <th>Velicina</th>
-            <th>Akcija</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach($vrsta as $vrsta): ?>
-        <tr>
-            <td><?php echo $vrsta->vrsta ?></td>
-            <td><?php echo $vrsta->velicina ?></td>
+<br>
+<br>
+<table class="ui celled table">
+<a href="<?php echo App::config("url") ?>vrsta/prepareadd">
 
+  <thead>
+    <tr><th>Vrsta</th>
+    <th>Velicina</th>
+    <th>Akcija</th>
+  </tr></thead>
+  <tbody>
+  <?php foreach($vrsta as $vrsta): ?>
 
-            <td> 
-                <a href="<?php echo App::config("url") ?>vrsta/prepareedit/<?php echo $vrsta->sifra ?>">
-                    <i style ="color:green;" class="fas fa-edit fa-2x"></i>
-                </a>
+    <tr>
+    <td><?php echo $vrsta->vrsta ?></td>
+    <td><?php echo $vrsta->velicina ?></td>
+    <td> 
+    <a href="<?php echo App::config("url") ?>vrsta/prepareedit/<?php echo $vrsta->sifra ?>">
+        <i style ="color:green;" class="fas fa-edit fa-2x"></i>
+    </a>
 
-                <?php if($vrsta->ukupno==0): ?>
-                    <a style="color: red;"
-                     href="<?php echo App::config("url") ?>vrsta/delete/<?php echo $vrsta->sifra ?>">
-                        <i class="fas fa-trash fa-2x"></i>
-                    </a>
-                <?php endif; ?>
-            
-             </td>
-        </tr>
-        <?php endforeach;?>
-    </tbody>
+    <?php if($vrsta->ukupno==0): ?>
+        <a style="color: red;"
+            href="<?php echo App::config("url") ?>vrsta/delete/<?php echo $vrsta->sifra ?>">
+            <i class="fas fa-trash fa-2x"></i>
+        </a>
+    <?php endif; ?>    
+</tr>
+
+    <?php endforeach;?>
+    
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="4">
+      <div class="positive ui button" style="float: right;">
+      <a href="<?php echo App::config("url") ?>vrsta/prepareadd"><div class="ui green button"><i class="paw icon"></i></i>Dodaj</div></a>
+    </div>
+      </th>
+    </tr>
+  </tfoot>
 </table>

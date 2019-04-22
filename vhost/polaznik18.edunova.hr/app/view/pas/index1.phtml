@@ -1,0 +1,38 @@
+<?php include_once "head.phtml" ?>
+<a href="<?php echo App::config("url") ?>pas/prepareadd" class="success button expanded">
+    Dodaj novog psa
+</a>
+<table>
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Slika</th>
+            <th>Vrsta</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($pas as $pas): ?>
+        <tr>
+            <td><?php echo $pas->ime ?></td>
+            <td id="slikaPas"><img src="<?php echo $pas->slika ?>" /></td>
+            <td><?php echo $pas->pas_vrsta ?></td>
+
+
+            <td> 
+                <a href="<?php echo App::config("url") ?>pas/prepareedit/<?php echo $pas->sifra ?>">
+                    <i style ="color:green;" class="fas fa-edit fa-2x"></i>
+                </a>
+
+                <?php if($pas->ukupno==0): ?>
+                    <a style="color: red;"
+                     href="<?php echo App::config("url") ?>pas/delete/<?php echo $pas->sifra ?>">
+                        <i class="fas fa-trash fa-2x"></i>
+                    </a>
+                <?php endif; ?>
+            
+             </td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
