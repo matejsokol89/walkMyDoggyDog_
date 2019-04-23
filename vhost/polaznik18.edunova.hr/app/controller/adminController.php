@@ -24,6 +24,7 @@ class AdminController
                 $user = new stdClass();
                 $user->ime=$red->ime;
                 $user->prezime=$red->prezime;
+                $user->role=$red->role;
                 $user->email=$red->email;
                 $user->imePrezime=$red->ime . " " . $red->prezime;
 
@@ -49,5 +50,24 @@ class AdminController
         Session::getInstance()->odjava();
         $view = new View();
         $view->render('index',["poruka"=>""]);
+    }
+
+    function registration()
+    {
+        $view = new View();
+        $view->render('registration',["message"=>""]);
+    }
+    function register()
+    {
+        $db = Db::getInstance();
+        $izraz = $db->prepare("insert into operater (ime,prezime,email,lozinka) values (:ime,:prezime,:email,:lozinka)");
+        $izraz->bindValue('ime', Request::post("ime"));
+        $izraz->bindValue('prezime', Request::post("prezime"));
+        $izraz->bindValue('email', Request::post("email"));
+        $izraz->bindValue('lozinka', password_hash(Request::post("password"),PASSWORD_DEFAULT));
+        $izraz->execute();
+        Session::getInstance()->odjava();
+        $view = new View();
+        $view->render('login',["message"=>"Success"]);
     }
 }

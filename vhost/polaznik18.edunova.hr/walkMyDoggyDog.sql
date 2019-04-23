@@ -44,14 +44,16 @@ create table operater(
 	sifra int not null primary key auto_increment,
 	ime varchar(50) not null,
 	prezime varchar(50) not null,
+	role enum ('admin' , 'user') default 'user',
 	email varchar(100) not null,
 	lozinka char(60) not null
 );
 
-insert into operater (ime,prezime,email,lozinka) values
+insert into operater (ime,prezime,role,email,lozinka) values
 (
 	'Matej',
 	'Sokol',
+	'admin',
 	'sokolvm@gmail.com',
 	'$2y$10$0oeK5JKlHslw1ksWLcimZOV2ggnEh5vltZq3ckemw4eIH79GYpTwi'
 

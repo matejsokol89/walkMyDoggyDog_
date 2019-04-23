@@ -17,7 +17,8 @@ class Oglas
         a.slika,
         a.aktivan,
         a.osoba,
-        b.ime as osoba_ime
+        b.ime as osoba_ime,
+        b.mobitel as osoba_mobitel
         from oglas a left join
         osoba b on a.osoba=b.sifra 
         group by
@@ -28,7 +29,7 @@ class Oglas
         a.slika,
         a.aktivan,
         a.osoba
-        order by a.datumOglasa
+        order by a.datumOglasa DESC 
         limit ". (($stranica*$poStranici)- $poStranici)  . ",$poStranici
  
         ");

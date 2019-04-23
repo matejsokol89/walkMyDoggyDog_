@@ -28,6 +28,8 @@
                             <?php echo Session::getInstance()->getUser()->imePrezime ?>
                         </a>
                         <?php else:?>
+                        <a class="item"  href="<?php echo App::config("url") ?>admin/registration">Registracija</a>
+
                         <a class="item" href="<?php echo App::config("url") ?>admin/prijava">Prijava</a>
                         <?php endif;?>
                 </div>
