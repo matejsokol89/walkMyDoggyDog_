@@ -18,11 +18,32 @@ action="<?php echo App::config("url") ?>pas/add/<?php echo Request::post("sifra"
     value="<?php echo Request::post("slika") ?>" />
         </div>
         
-        <div class="field">
+        <!-- <div class="field">
         <label>Vrsta</label>
         <input type="number" name="vrsta"
     value="<?php echo Request::post("vrsta") ?>" />
         </div>
+         -->
+        <div class="field">
+    <label for="vrsta">Vrsta</label>
+<select name="vrsta" id="vrsta">
+    <option value="0">Choose</option>
+
+    <?php foreach(Vrsta::read() as $vrsta): ?>
+
+        <option
+
+            <?php if(Request::post("vrsta") == $vrsta->id):?>
+                selected="selected"
+            <?php endif;?>
+
+                value="<?php echo $vrsta->id ?>"><?php echo $vrsta->vrsta ?></option>
+                <?php endforeach; ?>
+</select>
+
+</div>
+
+        
     <div class="ui buttons">
   <a href="<?php echo App::config("url") ?>pas/index"><div class="ui button"></i>Odustani</div></a>
   <div class="or"></div>
@@ -33,3 +54,22 @@ action="<?php echo App::config("url") ?>pas/add/<?php echo Request::post("sifra"
     <?php echo $poruka ?>
 </div>
 
+
+
+<!-- <label for="vrsta">Vrsta</label>
+<select name="vrsta" id="vrsta">
+    <option value="0">Choose</option>
+
+    <?php foreach(Vrsta::read() as $vrsta): ?>
+
+        <option
+
+            <?php if(Request::post("vrsta") == $vrsta->id):?>
+                selected="selected"
+            <?php endif;?>
+
+                value="<?php echo $vrsta->id ?>"><?php echo $vrsta->vrsta ?></option>
+
+    <?php endforeach; ?>
+
+</select> -->
