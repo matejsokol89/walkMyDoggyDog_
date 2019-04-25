@@ -33,11 +33,11 @@ action="<?php echo App::config("url") ?>pas/add/<?php echo Request::post("sifra"
 
         <option
 
-            <?php if(Request::post("vrsta") == $vrsta->id):?>
+            <?php if(Request::post("vrsta") == $vrsta->sifra):?>
                 selected="selected"
             <?php endif;?>
 
-                value="<?php echo $vrsta->id ?>"><?php echo $vrsta->vrsta ?></option>
+                value="<?php echo $vrsta->sifra ?>"><?php echo $vrsta->vrsta ?></option>
                 <?php endforeach; ?>
 </select>
 
